@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Puffy Foods</title>
+    <link rel="stylesheet" href="stylecontact.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald:200,400|Playfair+Display:400,400i"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+
+<header>
+    <h1>Follow our Instagram for more content!</h1>
+</header>
+
+<main>
+    <div class="social-media">
+        <a href="https://www.instagram.com/puffyfoods?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" target="_blank">
+            <img src="ig.svg" alt="Instagram" id="instagram-icon" class="profile-picture">
+        </a>
+    </div>
+    <div id="availability">
+        <h2>Availability</h2>
+        <p id="availability-status">Checking availability...</p>
+        <img src="pusheen-baking.gif" alt="Availability" class="availability-image"> 
+    </div>
+</main>
+
+<nav class="sticky">
+    <div class="navbar--container">
+        <div class="navbar--icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navbar--title">
+            <h4>EXPLORE</h4>
+        </div>
+    </div>
+    <div class="nav--open close">
+        <div class="nav--open-icon">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="nav--open-title">
+            <h5>EXPLORE</h5>
+        </div>
+        <div class="nav--open-menu">
+            <a href="index.html">Home</a>
+            <a href="creations.html">Creations</a>
+            <a href="aboutme.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<footer>
+    <p>&copy; 2024 Puffy Foods. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function checkAvailability() {
+            const availabilityStatus = document.getElementById('availability-status');
+            const currentDate = new Date();
+            const day = currentDate.getDay(); 
+            const hour = currentDate.getHours(); 
+
+            let statusMessage = '';
+
+            if (day >= 1 && day <= 5 && hour >= 9 && hour <= 17) {
+                statusMessage = 'We are available to respond to your queries.';
+                availabilityStatus.style.color = 'green'; 
+            } else {
+                statusMessage = 'We are currently unavailable. Please reach out during our working hours: Monday to Friday, 9 AM to 5 PM.';
+                availabilityStatus.style.color = 'red'; 
+            }
+
+            availabilityStatus.textContent = statusMessage;
+        }
+
+        checkAvailability(); 
+
+        document.querySelector('.navbar--icon').addEventListener('click', () => {
+            document.querySelector('.nav--open').classList.remove('close');
+        });
+
+        document.querySelector('.nav--open-icon').addEventListener('click', () => {
+            document.querySelector('.nav--open').classList.add('close');
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creations - Puffy Foods</title>
+    <link rel="stylesheet" href="stylecreation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="sticky">
+  <div class="navbar--container">
+    <div class="navbar--icon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="navbar--title">
+      <h4>EXPLORE</h4>
+    </div>
+  </div>
+  <div class="nav--open close">
+    <div class="nav--open-icon">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="nav--open-title">
+      <h5>EXPLORE</h5>
+    </div>
+    <div class="nav--open-menu">
+      <a href="index.html">Home</a>
+      <a href="creations.html">Creations</a>
+      <a href="aboutme.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+    <section id="cakes">
+        <h2>Cakes</h2>
+        <div class="cake-gallery">
+            <div class="cake">
+                <img src="cake.png" alt="Cake 1">
+                <h3>Raspberry Buttercream Cake</h3>
+            </div>
+            <div class="cake">
+                <img src="cake2.png" alt="Cake 3">
+                <h3>Unicorn Cake</h3>
+            </div>
+            <div class="cake">
+                <img src="cake3.png" alt="Cake 4">
+                <h3>Cookies and Cream Cake</h3>
+            </div>
+            <div class="cake">
+                <img src="cake4.png" alt="Cake 5">
+                <h3>Coconut Island Cake</h3>
+            </div>
+        </div>
+    </section>
+    
+    <section id="more">
+        <h2>More</h2>
+        <div class="more-gallery">
+            <div class="more-item">
+                <img src="cupcakes.png" alt="Red Velvet Cupcakes">
+                <h3>Red Velvet Cupcakes</h3>
+            </div>
+            <div class="more-item">
+                <img src="cupcake.png" alt="Creamy Fruit Cupcake">
+                <h3>Creamy Fruit Cupcake</h3>
+            </div>
+            <div class="more-item">
+                <img src="croissant.png" alt="Chocolate Croissant">
+                <h3>Chocolate Croissant</h3>
+            </div>
+            <div class="more-item">
+                <img src="macarons.png" alt="Nutella French Macarons">
+                <h3>Nutella French Macarons</h3>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Puffy Foods. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelector('.navbar--icon').addEventListener('click', () => {
+    document.querySelector('.nav--open').classList.remove('close');
+  });
+
+  document.querySelector('.nav--open-icon').addEventListener('click', () => {
+    document.querySelector('.nav--open').classList.add('close');
+  });
+</script>
+
+</body>
+</html>

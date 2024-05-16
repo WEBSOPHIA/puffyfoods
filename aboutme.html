@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Puffy Foods</title>
+    <link rel="stylesheet" href="styleabout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<nav class="sticky">
+  <div class="navbar--container">
+    <div class="navbar--icon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="navbar--title">
+      <h4>EXPLORE</h4>
+    </div>
+  </div>
+  <div class="nav--open close">
+    <div class="nav--open-icon">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="nav--open-title">
+      <h5>EXPLORE</h5>
+    </div>
+    <div class="nav--open-menu">
+      <a href="index.html">Home</a>
+      <a href="creations.html">Creations</a>
+      <a href="aboutme.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section id="about">
+      <h2 class="about-heading">About Me</h2>
+      <div class="about-content">
+          <img src="sophia.jpg" alt="Me" class="profile-picture">
+          <p>Hello! My name is Sophia Soong and I am the owner of Puffy Foods. I've started this 'business' since 2019. Since I was 10 I have had great passions for baking. I would non-stop watch baking videos on YouTube.</p>
+          <p>One of the first desserts I've made was the French Macaron. This is one of the most difficult desserts to make as it requires so many factors and attention. Even with practice, to this day I still struggle to perfect French Macarons.</p>
+          <p>However, failure does not discourage me to from trying again and again. There are times that I make it perfect and there are times I will need to start over.</p>
+          <p>It can be frustrating but also fun because it means I just get to do something I love all over again. One day I hope I can become a successful content creator and share my experience and love for creating desserts.</p>
+      </div>
+  </section>
+  <section id="video">
+    <h2>Recently I've been into making bread</h2>
+    <div class="video-container">
+        <video controls>
+            <source src="bread.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>I made mini loaves of bread here. In fact as we speak, and while I am doing my project I am making baguettes.</p>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Puffy Foods. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelector('.navbar--icon').addEventListener('click', () => {
+    document.querySelector('.nav--open').classList.remove('close');
+  });
+
+  document.querySelector('.nav--open-icon').addEventListener('click', () => {
+    document.querySelector('.nav--open').classList.add('close');
+  });
+</script>
+
+</body>
+</html>

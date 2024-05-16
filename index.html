@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puffy Foods</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+
+<nav class="sticky">
+  <div class="navbar--container">
+    <div class="navbar--icon">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="navbar--title">
+      <h4>EXPLORE</h4>
+    </div>
+  </div>
+  <div class="nav--open close">
+    <div class="nav--open-icon">
+      <i class="fas fa-times"></i>
+    </div>
+    <div class="nav--open-title">
+      <h5>EXPLORE</h5>
+    </div>
+    <div class="nav--open-menu">
+        <a href="index.html">Home</a>
+        <a href="creations.html">Creations</a>
+        <a href="aboutme.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+</main>
+
+<footer>
+    <p>&copy; 2024 Puffy Foods. All rights reserved.</p>
+</footer>
+
+<script>
+  document.querySelector('.navbar--icon').addEventListener('click', () => {
+    document.querySelector('.nav--open').classList.remove('close');
+  });
+
+  document.querySelector('.nav--open-icon').addEventListener('click', () => {
+    document.querySelector('.nav--open').classList.add('close');
+  });
+</script>
+
+</body>
+</html> 
